@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    
+    <!-- ヘッダー -->
+    <div class="header">
+        <div class="header-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+        </div>
+        <div class="header-text">
+            <h1>GA4 Visualizer</h1>
+            <p>イベント要素の可視化ツール</p>
+        </div>
+    </div>
+    
+    <!-- メインコンテンツ -->
+    <div class="main">
+        
+        <!-- 検出件数カード -->
+        <div class="count-card">
+            <div class="count-info">
+                <div class="count-label">検出された要素</div>
+                <div class="count-value">
+                    <span id="countNum">-</span>
+                    <span class="count-unit">件</span>
+                </div>
+            </div>
+            <div class="count-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- アクションボタン -->
+        <div class="actions">
+            
+            <button id="highlight" class="action-btn action-btn-indigo">
+                <div class="action-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                    </svg>
+                </div>
+                <div class="action-text">
+                    <div class="action-title">ハイライト表示</div>
+                    <div class="action-desc">要素を可視化</div>
+                </div>
+                <div class="action-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </button>
+            
+            <button id="clear" class="action-btn action-btn-slate">
+                <div class="action-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </div>
+                <div class="action-text">
+                    <div class="action-title">ハイライト解除</div>
+                    <div class="action-desc">表示をリセット</div>
+                </div>
+                <div class="action-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </button>
+            
+            <button id="log" class="action-btn action-btn-emerald">
+                <div class="action-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <div class="action-text">
+                    <div class="action-title">コンソール出力</div>
+                    <div class="action-desc">詳細一覧を表示</div>
+                </div>
+                <div class="action-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </button>
+            
+        </div>
+        
+        <!-- ヒント -->
+        <div class="hint">
+            <div class="hint-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+            </div>
+            <div class="hint-text">
+                要素をクリックすると送信情報を確認できます<span class="hint-sub">（F12 → Console）</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- フッター -->
+    <div class="footer">
+        <span>v1.0</span>
+        <span class="status">
+            <span class="status-dot"></span>
+            Ready
+        </span>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

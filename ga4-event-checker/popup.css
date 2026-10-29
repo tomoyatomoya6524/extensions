@@ -1,0 +1,291 @@
+/* ========== リセット ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 400px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #1e293b;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== ヘッダー ========== */
+.header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.header-text h1 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 2px;
+}
+
+.header-text p {
+    font-size: 12px;
+    color: #c7d2fe;
+    font-weight: 400;
+}
+
+/* ========== メインコンテンツ ========== */
+.main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ========== 検出件数カード ========== */
+.count-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.count-value {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+#countNum {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.count-unit {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.count-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    color: #fff;
+}
+
+/* ========== アクションボタン ========== */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    text-align: left;
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.action-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.action-text {
+    flex: 1;
+}
+
+.action-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.action-desc {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.action-arrow {
+    width: 16px;
+    height: 16px;
+    color: #94a3b8;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.action-btn:hover .action-arrow {
+    transform: translateX(4px);
+}
+
+/* ========== ボタンのカラーバリエーション ========== */
+
+/* インディゴ（ハイライト表示） */
+.action-btn-indigo .action-icon {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.action-btn-indigo:hover {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+}
+
+.action-btn-indigo:hover .action-icon {
+    background: #6366f1;
+    color: #fff;
+}
+
+/* スレート（ハイライト解除） */
+.action-btn-slate .action-icon {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.action-btn-slate:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.action-btn-slate:hover .action-icon {
+    background: #475569;
+    color: #fff;
+}
+
+/* エメラルド（コンソール出力） */
+.action-btn-emerald .action-icon {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.action-btn-emerald:hover {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+}
+
+.action-btn-emerald:hover .action-icon {
+    background: #10b981;
+    color: #fff;
+}
+
+/* ========== ヒント ========== */
+.hint {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.hint-icon {
+    width: 16px;
+    height: 16px;
+    color: #f59e0b;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.hint-text {
+    font-size: 12px;
+    color: #92400e;
+    line-height: 1.5;
+}
+
+.hint-sub {
+    color: #d97706;
+    font-weight: 500;
+}
+
+/* ========== フッター ========== */
+.footer {
+    border-top: 1px solid #f1f5f9;
+    padding: 12px 20px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: #34d399;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
